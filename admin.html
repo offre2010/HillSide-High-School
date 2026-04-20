@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | HillSide High School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --clr-primary: #FF6600;
+            --clr-primary-dark: #E65C00;
+            --clr-bg: #F3F4F6;
+            --clr-white: #FFFFFF;
+            --clr-border: #E5E7EB;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--clr-bg);
+            color: #333;
+            display: none;
+        }
+
+        .topbar {
+            height: 70px;
+            background-color: var(--clr-white);
+            border-bottom: 1px solid var(--clr-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--clr-white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--clr-border);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: var(--clr-primary);
+        }
+
+        h2:first-child {
+            margin-top: 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--clr-border);
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .form-group input[type="file"] {
+            border: 1px dashed var(--clr-primary);
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            background: rgba(255, 102, 0, 0.05);
+            cursor: pointer;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background-color: var(--clr-primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--clr-primary-dark);
+        }
+
+        .success-msg {
+            display: none;
+            background: #dcfce7;
+            color: #166534;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            border: 1px solid var(--clr-border);
+            padding: 20px;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .card h4 {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .current-img {
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: block;
+            border: 1px solid #ddd;
+        }
+
+        /* Loading spinner */
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid var(--clr-primary);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <h1>HillSide High Sch CMS</h1>
+        <div>
+            <a href="index.html" class="btn" style="text-decoration: none; font-size:0.9rem; background: #333;">View
+                Website</a>
+            <button id="logoutBtn" class="btn"
+                style="background: transparent; color: #ef4444; border: 1px solid #ef4444; margin-left: 10px;"
+                onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="successMsg" class="success-msg"><i class="fas fa-check-circle"></i> Changes saved successfully!</div>
+
+        <form id="cmsForm">
+            <!-- GENERAL SETTINGS -->
+            <h2>General Settings</h2>
+            <div class="form-group">
+                <label>Website Logo</label>
+                <img id="currLogo" class="current-img" src="" alt="Current Logo">
+                <input type="file" name="logoImage" accept="image/*">
+            </div>
+
+            <!-- HERO SECTION -->
+            <h2>Hero Section</h2>
+            <div class="form-group">
+                <label>Hero Title (Use HTML for colors, e.g., &lt;span
+                    class='accent-text'&gt;School&lt;/span&gt;)</label>
+                <input type="text" name="heroTitle" id="heroTitle" required>
+            </div>
+            <div class="form-group">
+                <label>Hero Tagline</label>
+                <textarea name="heroTagline" id="heroTagline" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Background Image</label>
+                <img id="currBg" class="current-img" src="" alt="Current Background">
+                <input type="file" name="bgImage" accept="image/*">
+            </div>
+
+            <!-- ABOUT US -->
+            <h2>About Us</h2>
+            <div class="form-group">
+                <label>Our History</label>
+                <textarea name="aboutHistory" id="aboutHistory" rows="4" required></textarea>
+            </div>
+
+            <!-- ACADEMICS (TEACHERS) -->
+            <h2>Our Academics (Teachers)</h2>
+            <div class="card-grid" id="teachersGrid">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- GALLERY -->
+            <h2>School Gallery</h2>
+            <div class="card-grid" id="galleryGrid">
+                <!-- Injected via JS -->
+            </div>
+
+            <div
+                style="margin-top: 40px; text-align: right; position: sticky; bottom: 20px; background: rgba(255,255,255,0.9); padding: 15px; border-top: 1px solid #ddd;">
+                <button type="submit" class="btn btn-primary">Save All Changes <div class="loader" id="submitLoader">
+                    </div></button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let siteData = {};
+
+        // --- Auth Check ---
+        fetch('/api/check-auth')
+            .then(res => res.json())
+            .then(data => {
+                if (data.isAuthenticated) {
+                    document.body.style.display = 'block';
+                    loadData();
+                } else {
+                    let pass = prompt("Enter Admin Password:");
+                    fetch('/api/login', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ password: pass })
+                    }).then(r => r.json()).then(authData => {
+                        if (authData.success) {
+                            document.body.style.display = 'block';
+                            loadData();
+                        } else {
+                            alert("Incorrect Password!");
+                            window.location.href = 'index.html';
+                        }
+                    });
+                }
+            });
+
+        function logout() {
+            fetch('/api/logout', { method: 'POST' }).then(() => window.location.href = 'index.html');
+        }
+
+        // --- Load Data into Forms ---
+        function loadData() {
+            fetch('/api/content')
+                .then(res => res.json())
+                .then(data => {
+                    siteData = data;
+                    document.getElementById('currLogo').src = data.logoImage || 'assets/images/logo.jpg';
+                    document.getElementById('currBg').src = data.bgImage;
+                    document.getElementById('heroTitle').value = data.heroTitle;
+                    document.getElementById('heroTagline').value = data.heroTagline;
+                    document.getElementById('aboutHistory').value = data.aboutHistory;
+
+                    // Populate Teachers
+                    const tGrid = document.getElementById('teachersGrid');
+                    tGrid.innerHTML = '';
+                    data.teachers.forEach((t, i) => {
+                        tGrid.innerHTML += `
+                            <div class="card">
+                                <h4>Teacher ${i + 1}</h4>
+                                <img src="${t.image}" class="current-img">
+                                <label style="font-size:0.8rem">Upload New Image</label>
+                                <input type="file" name="teacher_img_${i}" accept="image/*" style="margin-bottom:10px;">
+                                <input type="text" id="t_name_${i}" value="${t.name}" placeholder="Name" style="margin-bottom:10px; width:100%; padding:8px;">
+                                <input type="text" id="t_role_${i}" value="${t.role}" placeholder="Role" style="margin-bottom:10px; width:100%; padding:8px;">
+                                <textarea id="t_port_${i}" placeholder="Portfolio" style="width:100%; padding:8px;" rows="2">${t.portfolio}</textarea>
+                            </div>
+                        `;
+                    });
+
+                    // Populate Gallery
+                    const gGrid = document.getElementById('galleryGrid');
+                    gGrid.innerHTML = '';
+                    data.gallery.forEach((g, i) => {
+                        gGrid.innerHTML += `
+                            <div class="card">
+                                <h4>Gallery Image ${i + 1}</h4>
+                                <img src="${g.image}" class="current-img">
+                                <label style="font-size:0.8rem">Upload New Image</label>
+                                <input type="file" name="gallery_img_${i}" accept="image/*" style="margin-bottom:10px;">
+                                <input type="text" id="g_cap_${i}" value="${g.caption}" placeholder="Caption" style="width:100%; padding:8px;">
+                            </div>
+                        `;
+                    });
+                });
+        }
+
+        // --- Save Changes ---
+        document.getElementById('cmsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('submitLoader').style.display = 'inline-block';
+
+            const formData = new FormData(this);
+
+            // Reconstruct JSON arrays for Teachers and Gallery
+            const newTeachers = [];
+            for (let i = 0; i < siteData.teachers.length; i++) {
+                newTeachers.push({
+                    name: document.getElementById('t_name_' + i).value,
+                    role: document.getElementById('t_role_' + i).value,
+                    portfolio: document.getElementById('t_port_' + i).value
+                });
+            }
+            formData.append('teachers', JSON.stringify(newTeachers));
+
+            const newGallery = [];
+            for (let i = 0; i < siteData.gallery.length; i++) {
+                newGallery.push({
+                    caption: document.getElementById('g_cap_' + i).value
+                });
+            }
+            formData.append('gallery', JSON.stringify(newGallery));
+
+            fetch('/api/content', {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('submitLoader').style.display = 'none';
+                    if (data.success) {
+                        const successMsg = document.getElementById('successMsg');
+                        successMsg.style.display = "block";
+                        window.scrollTo(0, 0);
+                        setTimeout(() => successMsg.style.display = "none", 4000);
+                        // Reload data to reflect new images
+                        loadData();
+                    } else {
+                        alert('Error saving data. Are you logged in?');
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert("An error occurred!");
+                    document.getElementById('submitLoader').style.display = 'none';
+                });
+        });
+    </script>
+</body>
+
+</html>

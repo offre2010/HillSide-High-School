@@ -1,0 +1,58 @@
+{
+  "heroTitle": "Welcome to <span class='accent-text'>HillSide High School</span>",
+  "heroTagline": "Empowering Minds, Shaping the Future in Cross River State.",
+  "bgImage": "assets/images/background.jpg",
+  "aboutHistory": "Founded in the heart of Ikom, Cross River State, HillSide High School has a rich tradition of academic excellence and moral discipline. We have grown into a leading institution dedicated to producing well-rounded individuals ready to face global challenges.",
+  "teachers": [
+    {
+      "name": "Mrs. Florence Adi Bisong",
+      "role": "Proprietress",
+      "portfolio": "M.Ed Educational Leadership. Over 20 years of experience in shaping young minds and educational administration.",
+      "image": "assets/images/1776647064661.jpg"
+    },
+    {
+      "name": "Mr. John Smith",
+      "role": "Head of Sciences",
+      "portfolio": "B.Sc Physics. Passionate about practical science and innovation.",
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Ms. Sarah Johnson",
+      "role": "Head of Arts & Humanities",
+      "portfolio": "B.A English Literature. Dedicated to fostering creativity and critical thinking.",
+      "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "name": "Mr. David Okafor",
+      "role": "Mathematics & ICT",
+      "portfolio": "B.Sc Computer Science. Preparing students for the digital future.",
+      "image": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Modern Classrooms"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Interactive Learning"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1525926472898-a0f06bfc12b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Science Practical"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Conducive Environment"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Well-equipped Library"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "caption": "Sports & Recreation"
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HillSide High School, Ikom. Providing quality education and building a better future.">
+    <title>HillSide High School | Ikom</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <!-- Uploaded logo file -->
+                <img src="assets/images/logo.jpg" alt="HillSide High School Logo" id="school-logo">
+                <span class="logo-text">HillSide <span class="accent-text">High School</span></span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#academics" class="nav-link">Academics</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home / Hero Section -->
+    <section id="home" class="hero">
+        <!-- The background image will be set in CSS, but we use a dark overlay to improve quality/readability -->
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-in-up">
+            <h1 class="hero-title" id="displayHeroTitle">Welcome to <span class="accent-text">HillSide High School</span></h1>
+            <p class="hero-tagline" id="displayHeroTagline">Empowering Minds, Shaping the Future in Ikom.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+                <!-- Link to Result Portal -->
+                <a href="https://hhs.softtenet.com" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Result Portal</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2 class="section-title">About <span class="accent-text">Us</span></h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-icon"><i class="fas fa-history"></i></div>
+                    <h3>Our History</h3>
+                    <p id="displayAboutHistory">Founded in the heart of Ikom, Cross River State, HillSide High School has a rich tradition of academic excellence and moral discipline. We have grown into a leading institution dedicated to producing well-rounded individuals ready to face global challenges.</p>
+                </div>
+                <div class="about-card fade-in" style="transition-delay: 0.1s;">
+                    <div class="about-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Our Mission</h3>
+                    <p>To provide a conducive learning environment that fosters academic brilliance, moral integrity, and innovative thinking, equipping students with the skills needed to excel in their chosen paths.</p>
+                </div>
+                <div class="about-card fade-in" style="transition-delay: 0.2s;">
+                    <div class="about-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Our Vision</h3>
+                    <p>To be the premier secondary educational institution in Nigeria, recognized for cultivating leadership, character, and lifelong learning in every student.</p>
+                </div>
+                <div class="about-card fade-in" style="transition-delay: 0.3s;">
+                    <div class="about-icon"><i class="fas fa-star"></i></div>
+                    <h3>Core Values</h3>
+                    <ul class="core-values-list">
+                        <li><i class="fas fa-check-circle"></i> Excellence</li>
+                        <li><i class="fas fa-check-circle"></i> Integrity</li>
+                        <li><i class="fas fa-check-circle"></i> Discipline</li>
+                        <li><i class="fas fa-check-circle"></i> Innovation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics / Teachers Section -->
+    <section id="academics" class="section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2 class="section-title">Our <span class="accent-text">Academics</span></h2>
+                <p class="section-subtitle">Meet our dedicated team of educators.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="teachers-grid">
+                <!-- Proprietress -->
+                <div class="teacher-card featured fade-in">
+                    <div class="teacher-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proprietress" class="teacher-img">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Mrs. Jane Doe</h3>
+                        <p class="teacher-role accent-text">Proprietress / Principal</p>
+                        <p class="teacher-portfolio">M.Ed Educational Leadership. Over 20 years of experience in shaping young minds and educational administration.</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 1 -->
+                <div class="teacher-card fade-in">
+                    <div class="teacher-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teacher" class="teacher-img">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Mr. John Smith</h3>
+                        <p class="teacher-role">Head of Sciences</p>
+                        <p class="teacher-portfolio">B.Sc Physics. Passionate about practical science and innovation.</p>
+                    </div>
+                </div>
+
+                <!-- Teacher 2 -->
+                <div class="teacher-card fade-in">
+                    <div class="teacher-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teacher" class="teacher-img">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Ms. Sarah Johnson</h3>
+                        <p class="teacher-role">Head of Arts & Humanities</p>
+                        <p class="teacher-portfolio">B.A English Literature. Dedicated to fostering creativity and critical thinking.</p>
+                    </div>
+                </div>
+                
+                <!-- Teacher 3 -->
+                <div class="teacher-card fade-in">
+                    <div class="teacher-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Teacher" class="teacher-img">
+                    </div>
+                    <div class="teacher-info">
+                        <h3 class="teacher-name">Mr. David Okafor</h3>
+                        <p class="teacher-role">Mathematics & ICT</p>
+                        <p class="teacher-portfolio">B.Sc Computer Science. Preparing students for the digital future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2 class="section-title">School <span class="accent-text">Gallery</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Classroom">
+                    <div class="gallery-overlay"><span>Modern Classrooms</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1511629091441-ee46146481b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students learning">
+                    <div class="gallery-overlay"><span>Interactive Learning</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1525926472898-a0f06bfc12b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Science Lab">
+                    <div class="gallery-overlay"><span>Science Practical</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="School Environment">
+                    <div class="gallery-overlay"><span>Conducive Environment</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Library">
+                    <div class="gallery-overlay"><span>Well-equipped Library</span></div>
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sports">
+                    <div class="gallery-overlay"><span>Sports & Recreation</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <h2 class="section-title">Contact <span class="accent-text">Us</span></h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <p>We'd love to hear from you. Reach out to us for admission inquiries or general information.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Our Address</h4>
+                                <p>3 Pa Bisong Lane, 4/C Ikom, C.R.S.</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h4>Phone Number</h4>
+                                <p><a href="tel:+2347010084921">+234 (0) 7010084921</a></p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p><a href="mailto:info@hillsidehighsch.edu.ng">info@hillsidehighsch.edu.ng</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container fade-in">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <span class="error-message">Please enter your name.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <span class="error-message">Please enter a valid email address.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+                            <span class="error-message">Please enter your message.</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="formSuccess" class="form-success hidden">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo footer-logo">
+                        <span class="logo-text">HillSide <span class="accent-text">High School</span></span>
+                    </a>
+                    <p>Empowering minds and shaping the future through quality education, discipline, and moral integrity in Ikom, Cross River State.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Admission Portal</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Staff Webmail</a></li>
+                        <li><a href="#">School Calendar</a></li>
+                        <li><a href="admin.html">Admin Dashboard</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> HillSide High School, Ikom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
